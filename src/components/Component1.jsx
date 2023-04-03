@@ -6,7 +6,7 @@ const Component1 = () => {
   return (
     <>
       <div>Component1</div>
-      <Component2 />
+      <Component2 coucou={hello} setHello={setHello} />
     </>
   );
 };
