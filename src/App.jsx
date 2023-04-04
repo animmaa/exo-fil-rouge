@@ -9,14 +9,14 @@ const address = [
     street: "place de la bourse"
   },
   {
-    city: "Londre"
-    country: "Angleterre"
-    street: ""
+    city: "Londre",
+    country: "Angleterre",
+    street: "Rue des anglais"
   },
   {
-    city:
-    country:
-    street: 
+    city: "Madrid",
+    country: "Espagne",
+    street: "rue des espagnol"
   },
 ]
 
@@ -24,7 +24,7 @@ function App() {
 
   return (
     <div className="App">
-      
+
     </div>
   )
 }
