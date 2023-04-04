@@ -1,14 +1,13 @@
-import React from 'react'
+import React from 'react';
 
 const Component5 = () => {
-
-  console.log('test')
+  console.log('test');
 
   return (
     <>
-    <div>Component5</div>
+      <div>Component5</div>
     </>
-  )
-}
+  );
+};
 
-export default Component5
+export default Component5;
