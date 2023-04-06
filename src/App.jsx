@@ -2,7 +2,7 @@ import axios from 'axios';
 import { useEffect, useState } from 'react';
 import './App.css';
 import ListCars from './components/ListCars';
-
+import ListCarsModeles from './components/ListCarsModeles';
 
 function App() {
   /* ---------- exercice 1 ----------- */
@@ -16,20 +16,33 @@ function App() {
 
   /* ---------- exercice 2 ----------- */
 
- useEffect(() => {
+  const [idModele, setIdModele] = useState(1);
+  const [carsModeles, setCarsModeles] = useState([]);
 
-  /* appel axios ici */
-
- }, [])
+  useEffect(() => {
+    axios
+      .get(
+        `https://parallelum.com.br/fipe/api/v1/carros/marcas/${idModele}/modelos`
+      )
+      .then((response) => setCarsModeles(response.data.modelos));
+  }, [idModele]);
 
   return (
     <div className="App">
       <div className="container-left">
         <button onClick={carsLoading}>afficher la liste des voitures</button>
-        {cars.map((car) => (
-          <div className="container" key={car.codigo}>
-            <ListCars car={car} />
+        {cars.map((res) => (
+          <div className="container" key={res.codigo}>
+            <ListCars car={res} />
+            <button onClick={() => setIdModele(res.codigo)}>
+              identifiant {res.codigo}{' '}
+            </button>
           </div>
+        ))}
+      </div>
+      <div className="container-right">
+        {carsModeles.map((res) => (
+          <ListCarsModeles key={res.codigo} modele={res} />
         ))}
       </div>
     </div>
