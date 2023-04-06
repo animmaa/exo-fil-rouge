@@ -21,13 +21,15 @@ Pour ceux qui le souhaitent je renseigne les étapes dans le README2, qui reste 
 
 Cet exercice demande d'utiliser des points non vus pour le moment. Pour cette raison je ne mettrais pas de correction, tant que nous ne les auront pas abordés.
 
+Ceux qui voudront le faire avant devront faire quelque recherche.
+
 ## but exercice 2
 
 Faire un bouton (pour chaque voiture) qui permettra d'afficher les différents modèles de la voiture sélectionnée. Voir screen3.
 
 Cela demandera un autre appel d'api avec axios qui devra être mis dans un useEffect pour ne pas faire un chargement infini.
 
-J'ai déjà inscrit le useEffect vous n'avez pas besoin de le modifier.
+La requete demandera un chiffre dans l'url (le chiffre correspond à l'ID de la voiture), il faudra donc faire un state avec par exemple une valeur = 1 pour l'initialisation et le set permettra de changer au click ce chiffre pour afficher une url différente.
 
-
+J'ai déjà inscrit le useEffect vous n'avez pas besoin de le modifier, à par y ajouter le state créé précédement dans le tableau.
 
